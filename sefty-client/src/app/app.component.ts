@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: "app-root",
@@ -8,22 +9,24 @@ import { Component } from "@angular/core";
 export class AppComponent {
   title = "sefty-client";
 
-  cities: City[];
+  constructor(public translate: TranslateService) {  
+    translate.addLangs(['en', 'fr']);  
+    if (localStorage.getItem('locale')) {  
+      let browserLang = localStorage.getItem('locale'); 
+      if(!browserLang) {
+        browserLang = "";
+      }
+      translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');  
+    } else {  
+      localStorage.setItem('locale', 'en');  
+      translate.setDefaultLang('en');  
+    }  
+  }
 
-  selectedCity!: City;
-
-  constructor() {
-    this.cities = [
-      { name: "New York", code: "NY" },
-      { name: "Rome", code: "RM" },
-      { name: "London", code: "LDN" },
-      { name: "Istanbul", code: "IST" },
-      { name: "Paris", code: "PRS" },
-    ];
+  changeLang(language: string) {  
+    localStorage.setItem('locale', language);  
+    this.translate.use(language);  
   }
 }
 
-interface City {
-  name: string;
-  code: string;
-}
+
