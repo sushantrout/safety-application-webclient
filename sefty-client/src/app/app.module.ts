@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserManagementComponent } from './admin/user-management/user-management.component';
 import { RoleManagementComponent } from './admin/role-management/role-management.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RoleManagementComponent } from './admin/role-management/role-management
     LoginComponent,
     AdminComponent,
     UserManagementComponent,
-    RoleManagementComponent
+    RoleManagementComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
