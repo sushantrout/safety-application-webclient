@@ -1,3 +1,6 @@
 {
-    "hello" : "FR - Hello"
+  "usermanagement": {
+    "username": "Fr-Username",
+    "password": "Fr-Password"
+  }
 }
