@@ -1,6 +1,13 @@
 {
   "usermanagement": {
-    "username": "Fr-Username",
-    "password": "Fr-Password"
+    "username": "Username",
+    "password": "Password",
+    "fullname": "Full Name",
+    "confirmpassword": "Confirm Password",
+    "email": "Email",
+    "login": "Login",
+    "signup": "Sign-up",
+    "signin": "Sign-In",
+    "mobile": "Phone No."
   }
 }
