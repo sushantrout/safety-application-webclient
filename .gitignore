@@ -24,3 +24,4 @@ hs_err_pid*
 sefty-client/package-lock.json
 package-lock.json
 .DS_Store
+sefty-client/src/environments/*

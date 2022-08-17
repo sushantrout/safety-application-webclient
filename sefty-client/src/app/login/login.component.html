@@ -4,13 +4,13 @@
         <h3 class="text-center">
             Login
         </h3>
-        <div class="grid">
+        <div class="grid p-fluid">
             <div class="sm:col-12 md:col-12 lg:col-12">
                 <div class="p-inputgroup">
                     <div class="p-inputgroup">
                         <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
                         <input type="text" pInputText placeholder="{{'usermanagement.username' | translate}}"
-                            class="p-inputtext">
+                            class="p-inputtext" [(ngModel)]="user.username">
                     </div>
                 </div>
             </div>
@@ -19,12 +19,13 @@
                     <div class="p-inputgroup">
                         <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
                         <input type="password" pInputText placeholder="{{'usermanagement.password' | translate}}"
-                            class="p-inputtext">
+                            class="p-inputtext" [(ngModel)]="user.password">
                     </div>
                 </div>
             </div>
             <div class="sm:col-6 md:col-6 lg:col-6">
-                <button pButton type="button" label="{{'usermanagement.login' | translate}}" class="p-bt"></button>
+                <button pButton type="button" label="{{'usermanagement.login' | translate}}" class="p-bt"
+                    (click)="userLogin()"></button>
             </div>
             <div class="sm:col-6 md:col-6 lg:col-6">
                 <button pButton type="button" label="{{'usermanagement.signup' | translate}}" class="p-bt"
