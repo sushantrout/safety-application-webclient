@@ -1,2 +1,9 @@
-<p-checkbox [(ngModel)]="value"></p-checkbox>
-<h1>Check box test</h1>
+<!-- <div class="field-checkbox">
+    <p-checkbox [(ngModel)]="value" [value]="optionValue" (ngModelChange)="changeEvent($event)"></p-checkbox>
+    <label>A-{{optionLabel}}</label>
+</div>
+ -->
+<div class="field-checkbox">
+    <p-checkbox name="group1" [value]="optionValue" [(ngModel)]="value"></p-checkbox>
+    <label>{{optionLabel}}</label>
+</div>

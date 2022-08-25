@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import {TranslateService} from "@ngx-translate/core";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: "app-root",
@@ -8,24 +8,25 @@ import {TranslateService} from "@ngx-translate/core";
 })
 export class AppComponent {
   title = "sefty-client";
-
-  constructor(public translate: TranslateService) {  
-    translate.addLangs(['en', 'fr']);  
-    if (localStorage.getItem('locale')) {  
-      let browserLang = localStorage.getItem('locale'); 
-      if(!browserLang) {
+  selectedValue: any = ["ODIA"];
+  selectedValue1: any;
+  constructor(public translate: TranslateService) {
+    translate.addLangs(['en', 'fr']);
+    if (localStorage.getItem('locale')) {
+      let browserLang = localStorage.getItem('locale');
+      if (!browserLang) {
         browserLang = "";
       }
-      translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');  
-    } else {  
-      localStorage.setItem('locale', 'en');  
-      translate.setDefaultLang('en');  
-    }  
+      translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+    } else {
+      localStorage.setItem('locale', 'en');
+      translate.setDefaultLang('en');
+    }
   }
 
-  changeLang(language: string) {  
-    localStorage.setItem('locale', language);  
-    this.translate.use(language);  
+  changeLang(language: string) {
+    localStorage.setItem('locale', language);
+    this.translate.use(language);
   }
 }
 

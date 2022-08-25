@@ -1,7 +1,9 @@
 <!-- <router-outlet></router-outlet> -->
-<bip-checkbox></bip-checkbox>
-<!-- <select #langSelect (change)="changeLang(langSelect.value)">
-    <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang
-        }}</option>
-</select>
-<h1>{{'hello' | translate}}</h1> -->
+<bip-checkbox [(ngModel)]="selectedValue" [optionValue]="'ODIA'" [optionLabel]="'ODISHA'"></bip-checkbox>
+<bip-radio [(ngModel)]="selectedValue1" [optionValue]="'ODIA1'" [optionLabel]="'ODISHA1'"></bip-radio>
+<bip-radio [(ngModel)]="selectedValue1" [optionValue]="'ODIA2'" [optionLabel]="'ODISHA2'"></bip-radio>
+<bip-radio [(ngModel)]="selectedValue1" [optionValue]="'ODIA3'" [optionLabel]="'ODISHA3'"></bip-radio>
+<bip-radio [(ngModel)]="selectedValue1" [optionValue]="'ODIA4'" [optionLabel]="'ODISHA4'"></bip-radio>
+C - {{selectedValue}}
+R - {{selectedValue1}}
+<bip-input-text [(ngModel)]="selectedValue1" [optionValue]="'ODIA5'" [optionLabel]="'ODISHA5'"></bip-input-text>
