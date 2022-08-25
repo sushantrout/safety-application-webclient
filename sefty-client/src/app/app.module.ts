@@ -9,6 +9,7 @@ import { AppSharedModule } from './shared/shared.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { BipSharedModule } from './shared/components/bip-shared/bip-shared.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -16,6 +17,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     AppSharedModule,
     HttpClientModule,
+    BipSharedModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

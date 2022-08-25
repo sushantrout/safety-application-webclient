@@ -10,8 +10,14 @@ import { BipInputFileComponent } from '../bip-input-file/bip-input-file.componen
 import { BipDataGridComponent } from '../bip-data-grid/bip-data-grid.component';
 import { BipDropdownComponent } from '../bip-dropdown/bip-dropdown.component';
 import { BipMultiselectComponent } from '../bip-multiselect/bip-multiselect.component';
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppSharedModule } from '../../shared.module';
+import { CheckboxModule } from 'primeng/checkbox';
+import { RadioButtonModule } from 'primeng/radiobutton'
+import { SelectButtonModule } from 'primeng/selectbutton';
+import { DropdownModule } from 'primeng/dropdown';
+import { MultiSelectModule } from 'primeng/multiselect';
 
 @NgModule({
   declarations: [BipLabelComponent,
@@ -25,7 +31,16 @@ import { BipMultiselectComponent } from '../bip-multiselect/bip-multiselect.comp
     BipDropdownComponent,
     BipMultiselectComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    BrowserModule,
+    ReactiveFormsModule,
+    AppSharedModule,
+    CheckboxModule,
+    RadioButtonModule,
+    SelectButtonModule,
+    DropdownModule,
+    MultiSelectModule
   ], exports: [
     BipLabelComponent,
     BipRadioComponent,

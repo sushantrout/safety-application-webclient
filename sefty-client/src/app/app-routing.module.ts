@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { LoginModule } from './login/login.module';
 
-const appRoutes: Routes = [
+/* const appRoutes: Routes = [
   {
     path: 'admin',
     loadChildren: () => import('./home/admin/admin.module').then(m => m.AdminModule)
@@ -17,10 +17,10 @@ const appRoutes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   }
-];
+]; */
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
-  exports: [RouterModule]
+  //imports: [RouterModule.forRoot(appRoutes)],
+  //exports: [RouterModule]
 })
 export class AppRoutingModule { }
