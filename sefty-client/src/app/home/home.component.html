@@ -1,1 +1,67 @@
-<p>home works!</p>
+<!-- <p>home works!</p> -->
+
+<div class="md:col-offset-3 lg:col-offset-4 sm:col-12 md:col-6 lg:col-4">
+    <div class="card">
+        <h5>Vertical</h5>
+        <p-chart type="bar" [data]="basicDataForVertical" [options]="basicOptions"></p-chart>
+    </div>
+    <!-- horizontal graph and chart section -->
+    <div class="card">
+        <div class="grid">
+            <div class="sm:col-12 md:col-12 lg:col-12">
+                <h5>Corrective and Preventive Action by Plant</h5>
+                <p-chart type="bar" [data]="basicData" [options]="horizontalOptions"></p-chart>
+            </div>
+            <div class="sm:col-4 md:col-4 lg:col-4">
+                <h5>By Location</h5>
+                <p-chart type="pie" [data]="data" [options]="chartOptions" [style]="{'width': '40%'}"></p-chart>
+            </div>
+            <div class="sm:col-4 md:col-4 lg:col-4">
+                <h5>By Hod</h5>
+                <p-chart type="doughnut" [data]="data" [options]="chartOptions" [style]="{'width': '40%'}"></p-chart>
+            </div>
+            <div class="sm:col-4 md:col-4 lg:col-4">
+                <h5>By Status</h5>
+                <p-chart type="doughnut" [data]="data" [options]="chartOptions" [style]="{'width': '40%'}"></p-chart>
+            </div>
+        </div>
+    </div>
+    <!-- table with pagination -->
+    <div class="card">
+        <h5>Horizontal Deployment Status</h5>
+        <p-table [value]="deploymentStatus" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+            [rowsPerPageOptions]="[10,25,50]">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Incident ID</th>
+                    <th>Corrective/Preventive ID</th>
+                    <th>Description</th>
+                    <th>Priority</th>
+                    <th>Assign Date</th>
+                    <th>Date Completed</th>
+                    <th>Status</th>
+                    <th>Remarks</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-deploymentStatus>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="paginatorleft">
+                <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+            </ng-template>
+            <ng-template pTemplate="paginatorright">
+                <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+            </ng-template>
+        </p-table>
+    </div>
+</div>

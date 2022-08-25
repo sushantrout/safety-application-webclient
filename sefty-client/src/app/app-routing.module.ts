@@ -8,10 +8,15 @@ const appRoutes: Routes = [
   {
     path: 'admin',
     loadChildren: () => import('./home/admin/admin.module').then(m => m.AdminModule)
-  }, {
-    path: 'login',
+  },
+  {
+    path: '',
     loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
   },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+  }
 ];
 
 @NgModule({

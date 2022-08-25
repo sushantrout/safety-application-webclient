@@ -1,0 +1,20 @@
+.bg-login {
+  background-image: url("/assets/images/oundforpowerpointaquabackgroun-vi.jpeg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.ui-card {
+  background: #ffffff82 !important;
+  color: #495057;
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%),
+    0 1px 3px 0 rgb(0 0 0 / 12%);
+  border-radius: 3px;
+}
