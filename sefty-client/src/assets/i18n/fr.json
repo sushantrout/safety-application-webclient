@@ -1,6 +1,6 @@
 {
   "usermanagement": {
-    "username": "Username",
+    "username": "User ID",
     "password": "Password",
     "fullname": "Full Name",
     "confirmpassword": "Confirm Password",
